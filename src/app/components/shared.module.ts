@@ -5,6 +5,8 @@ import { AppRoutingModule } from '../app-routing.module';
 // Angular Material
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 // Components
 import { NavComponent } from './home/nav/nav.component';
@@ -34,6 +36,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     MatTabsModule,
     MatExpansionModule,
     AplicacoesModule,
+    MatToolbarModule,
+    MatIconModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
     }),

@@ -6,6 +6,15 @@
     --text-menu: #FFF;
     --text-body: #A9A9A9;
     --black: #000000;
+    --background-nav: #050505;
+    --background-item-home: #1A1A1A;
+    --background-available-work: #062D1D;
+    --background-not-available-work: #2D0606;
+    --text-available-work: #4CE6A6;
+    --text-not-available-work: #EC7979;
+    --text-nav-home: #E6E6E6;
+    --text-nav-disabled: #999999;
+    --text-nav-hover: #4CE6A6;
 }
 
 // :root .dark-theme {
@@ -26,6 +35,7 @@ body {
     h4,
     p {
         color: var(--text-body);
+        margin: 0;
     }
 }
 
@@ -36,7 +46,17 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 @import './app/components/projetos/tabs/tabs.component.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}

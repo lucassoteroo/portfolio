@@ -14,19 +14,15 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'sobre',
-    component: SobreComponent
-  },
-  {
-    path: 'projetos',
+    path: 'projects',
     component: ProjetosComponent
   },
   {
-    path: 'tecnologias',
+    path: 'stack',
     component: TechComponent
   },
   {
-    path: 'certificados',
+    path: 'certificate',
     component: CertificadosPageComponent
   }
 ];

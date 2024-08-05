@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,19 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   public valor: boolean = false;
+  availableForWork: boolean = false;
 
-  constructor() { }
+  isMenuOpen = false;
+
+  menuItems = [
+    { name: 'About', link: '/', image: 'item-user', home: 'home' },
+    { name: 'Projects', link: '/projects', image: 'item-projects' },
+    { name: 'Stack', link: '/stack', image: 'item-stack' },
+    { name: 'Certificates', link: '/certificate', image: 'item-certificate' },
+    { name: 'Contact', link: '/contact', image: 'item-contact', home: 'contact' }
+  ];
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   toggleMenu() {
-    console.log('teste')
-    if (this.valor === true) {
-      this.valor = false;
-    } else if (this.valor === false) {
-      this.valor = true;
-    }
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  navigateTo(link: string) {
+    this.router.navigate([link]);
   }
 
 }

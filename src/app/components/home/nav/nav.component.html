@@ -1,18 +1,53 @@
-<header class="container">
-    <button (click)="toggleMenu()" class="btn-mobile">
-        <span id="hamburguer"></span>
-        Menu
-    </button>
-    <nav [ngClass]="{'active': valor, 'disabled': !valor}">
-        <ul>
-            <li><a [routerLink]="['']">Home</a></li>
-            <li><a [routerLink]="['/sobre']">Sobre</a></li>
-            <li><a [routerLink]="['/projetos']">Projetos</a></li>
-            <li><a [routerLink]="['/tecnologias']">Tecnologias</a></li>
-            <li><a [routerLink]="['/certificados']">Certificados</a></li>
-        </ul>
-    </nav>
-    <!-- <button type="button">
-        <img src="/assets/icons/sun.svg" alt="Ícone de sol">
-    </button> -->
-</header>
+<div class="container-nav">
+    <div class="menu-responsive">
+        <mat-toolbar class="toolbar-responsive">
+            <div class="responsive-perfil">
+                <img src="./assets/images/foto-perfil-img.jpg" alt="Foto de Lucas Sotero">
+                <div *ngIf="availableForWork" class="available-work">
+                    <img src="../../../../assets/images/icons/icon-circle-available.svg" alt="circulo de disponivel">
+                    <p>Available</p>
+                </div>
+                <div *ngIf="!availableForWork" class="not-available-work">
+                    <img src="../../../../assets/images/icons/icon-circle-not-available.svg"
+                        alt="circulo de não disponivel">
+                    <p>Unavailable</p>
+                </div>
+            </div>
+            <button mat-icon-button (click)="toggleMenu()" class="menu-button">
+                <mat-icon class="icon-menu">menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <nav [class.open]="isMenuOpen" class="menu-navigate">
+            <div *ngFor="let item of menuItems" class="body-items" [ngClass]="item.home">
+                <div [ngClass]="item.image" alt="Ícone de Projetos"></div>
+                <p mat-list-item>{{ item.name }}</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="image-perfil">
+        <img src="./assets/images/foto-perfil-img.jpg" alt="Foto de Lucas Sotero">
+        <div *ngIf="availableForWork" class="available-work">
+            <img src="../../../../assets/images/icons/icon-circle-available.svg" alt="circulo de disponivel">
+            <p>Available for Work</p>
+        </div>
+
+        <div *ngIf="!availableForWork" class="not-available-work">
+            <img src="../../../../assets/images/icons/icon-circle-not-available.svg" alt="circulo de não disponivel">
+            <p>Not Available for Work</p>
+        </div>
+    </div>
+
+    <div class="navegation">
+        <nav [ngClass]="{'active': valor, 'disabled': !valor}">
+            <ul *ngFor="let item of menuItems">
+                <li [ngClass]="item.home" (click)="navigateTo(item.link)">
+                    <div [ngClass]="item.image"></div>
+                    <p>{{ item.name }}</p>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
