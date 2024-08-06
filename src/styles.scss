@@ -17,12 +17,6 @@
     --text-nav-hover: #4ce6a6;
 }
 
-// :root .dark-theme {
-//     --primary: #0D47A1;
-//     --body: #FFF;
-//     --text-menu: #FFF;
-//     --text-body: #FFF;
-// }
 body {
     background-color: var(--body);
 }
@@ -48,8 +42,6 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
-
-@import './app/components/projetos/tabs/tabs.component.scss';
 
 html,
 body {

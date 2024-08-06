@@ -7,18 +7,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { SharedModule } from '../components/shared.module';
 
 // Pages
-import { SobreComponent } from './pages/sobre/sobre.component';
-import { ProjetosComponent } from './pages/projetos/projetos.component';
-import { TechComponent } from './pages/tech/tech.component';
-import { CertificadosPageComponent } from './pages/certificados/certificados-page.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    SobreComponent,
-    ProjetosComponent,
-    TechComponent,
-    CertificadosPageComponent
   ],
   imports: [
     CommonModule,
