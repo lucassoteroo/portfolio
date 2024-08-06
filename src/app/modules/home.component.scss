@@ -1,4 +1,369 @@
 .container-home {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-nav);
+
+    .nav {
+        padding: 80px;
+        position: fixed;
+        height: 100vh;
+        width: 430px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .presentation {
+        width: 100vw;
+        margin-left: 590px;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            h4 {
+                font-family: 'Inter', sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                height: 110px;
+                margin-top: 145px;
+                color: var(--text-nav-home);
+            }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                color: var(--text-nav-disabled);
+                width: 1095px;
+                text-align: justify;
+                line-height: 1.2;
+            }
+
+            .line-header {
+                display: flex;
+                flex-direction: row;
+                margin-top: 100px;
+
+                p {
+                    width: auto;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .header-line-divider {
+            border-color: var(--text-nav-disabled);
+            margin: 130px auto 130px 0px;
+            width: 90%;
+        }
+
+        .section-education {
+            h6 {
+                font-family: 'Inter', sans-serif;
+                font-size: 30px;
+                color: var(--text-nav-home);
+                margin: 0 0 90px 0;
+                font-weight: 500;
+            }
+
+            .data-education {
+                display: flex;
+                flex-direction: row;
+                margin-top: 40px;
+                align-items: center;
+
+                .icon-high-school {
+                    width: 25px;
+                    height: 25px;
+                    background-image: url('/assets/images/icons/icon-graduation.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                .icon-university {
+                    width: 25px;
+                    height: 25px;
+                    background-image: url('/assets/images/icons/icon-certificate.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                .data-college {
+                    margin-left: 15px;
+
+                    .college-name {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 18px;
+                        color: var(--text-nav-home);
+                        margin-bottom: 5px;
+                    }
+
+                    .college-about {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 16px;
+                        color: var(--text-nav-disabled);
+                    }
+                }
+            }
+        }
+
+        .education-line-divider {
+            border-color: var(--text-nav-disabled);
+            margin: 130px auto 130px 0px;
+            width: 90%;
+        }
+
+        .section-stack {
+            h6 {
+                font-family: 'Inter', sans-serif;
+                font-size: 30px;
+                color: var(--text-nav-home);
+                margin: 0 0 90px 0;
+                font-weight: 500;
+            }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                color: var(--text-nav-disabled);
+                width: 1095px;
+                text-align: justify;
+            }
+        }
+
+        .stack-line-divider {
+            border-color: var(--text-nav-disabled);
+            margin: 130px auto 130px 0px;
+            width: 90%;
+        }
+
+        .section-experience {
+            margin-bottom: 130px;
+
+            h6 {
+                font-family: 'Inter', sans-serif;
+                font-size: 30px;
+                color: var(--text-nav-home);
+                margin: 0 0 90px 0;
+                font-weight: 500;
+            }
+
+            .data-experience {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 40px;
+
+                .icon-fit {
+                    width: 25px;
+                    height: 25px;
+                    background-image: url('/assets/images/icons/icon-analyst-software.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                .icon-transire {
+                    width: 25px;
+                    height: 25px;
+                    background-image: url('/assets/images/icons/icon-machine-operator.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                .data-work {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 15px;
+
+                    .work-name {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 18px;
+                        color: var(--text-nav-home);
+                        margin-bottom: 5px;
+                    }
+
+                    .work-about {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 16px;
+                        color: var(--text-nav-disabled);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsividade para Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container-home {
+        display: flex;
+        flex-direction: column;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .presentation {
+            width: 98vw;
+            margin: 0;
+
+            .header {
+
+                h4 {
+                    margin: 80px auto 80px 11%;
+                    line-height: 1.2;
+                    font-size: 40px;
+                }
+
+                p {
+                    width: 600px;
+                    margin: 0 0 0 11%;
+                }
+
+                .line-header {
+                    margin: 80px 0 0 11%;
+                }
+            }
+
+            .header-line-divider,
+            .education-line-divider,
+            .stack-line-divider {
+                width: auto;
+            }
+
+            .section-education {
+                margin-left: 11%;
+            }
+
+            .section-stack {
+                h6 {
+                    margin-left: 11%;
+                }
+
+                p {
+                    width: 650px;
+                    margin-left: 11%;
+                }
+            }
+
+            .section-experience {
+                margin-left: 11%;
+            }
+        }
+    }
+}
+
+// Responsividade para Mobile
+@media screen and (max-width: 480px) {
+    .container-home {
+        display: flex;
+        flex-direction: column;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .presentation {
+            width: 98vw;
+            margin: 0;
+
+            .header {
+
+                h4 {
+                    margin: 80px auto;
+                    line-height: 1.2;
+                    text-align: center;
+                    font-size: 28px;
+                }
+
+                p {
+                    width: 320px;
+                    margin: 0 auto;
+                    font-size: 14px;
+                }
+
+                .line-header {
+                    margin: 80px auto 35px auto;
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+            .header-line-divider,
+            .education-line-divider,
+            .stack-line-divider {
+                width: auto;
+            }
+
+            .section-education {
+
+                h6 {
+                    margin-left: 35px;
+                    font-size: 24px;
+                }
+
+                .data-education {
+                    margin: 40px auto 0 35px;
+
+                    .data-college {
+
+                        .college-name {
+                            font-size: 14px;
+                        }
+
+                        .college-about {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .section-stack {
+                h6 {
+                    margin-left: 35px;
+                    font-size: 24px;
+                }
+
+                p {
+                    width: 320px;
+                    margin: 0 auto;
+                    font-size: 14px;
+                }
+            }
+
+            .section-experience {
+                h6 {
+                    margin-left: 35px;
+                    font-size: 24px;
+                }
+
+                .data-experience {
+                    margin: 40px auto 0 35px;
+
+                    .data-work {
+
+                        .work-name {
+                            font-size: 14px;
+                        }
+
+                        .work-about {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

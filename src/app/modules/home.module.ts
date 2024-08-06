@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 // Componentes
 import { SharedModule } from '../components/shared.module';
@@ -21,7 +22,8 @@ import { CertificadosPageComponent } from './pages/certificados/certificados-pag
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    MatDividerModule
   ]
 })
 export class HomeModule { }

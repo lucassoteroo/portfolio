@@ -2,7 +2,48 @@
     <div class="nav">
         <app-nav></app-nav>
     </div>
-    <div class="apresentacao">
-        <!-- <app-apresentacao></app-apresentacao> -->
+    <div class="presentation">
+        <div class="header">
+            <h4>Hi guys, i'm Lucas Sotero</h4>
+            <p>My name is Lucas Sotero, I've been interested in technology since I got my first computer, since then
+                it's been a never-ending learning process.
+                I am currently a Trainee Front-End Developer developing more and more, I
+                aim to become a Full-Stack Dev in one near future.</p>
+            <div class="line-header">
+                <img src="../../assets/images/icons/icon-map-pin.svg" alt="">
+                <p>Amazonas, Brasil</p>
+            </div>
+        </div>
+        <mat-divider class="header-line-divider"></mat-divider>
+        <div class="section-education">
+            <h6>Education</h6>
+            <div class="data-education" *ngFor="let item of dataEducation">
+                <div [ngClass]="item.image"></div>
+                <div class="data-college">
+                    <p class="college-name">{{ item.name }}</p>
+                    <p class="college-about">{{ item.local }}, {{ item.year }}</p>
+                </div>
+            </div>
+        </div>
+        <mat-divider class="education-line-divider"></mat-divider>
+        <div class="section-stack">
+            <h6>Stack</h6>
+            <p>My technical toolkit includes proficiency in HTML, CSS, Sass, JavaScript, TypeScript, NodeJs, Git and I
+                am also
+                well-versed in the Angular framework and responsive web design, ensuring the websites I create look and
+                function
+                perfectly on all devices. I have knowledge of Scrum and Kanban work methods</p>
+        </div>
+        <mat-divider class="stack-line-divider"></mat-divider>
+        <div class="section-experience">
+            <h6>Experience</h6>
+            <div class="data-experience" *ngFor="let item of dataExperience">
+                <div [ngClass]="item.image"></div>
+                <div class="data-work">
+                    <p class="work-name">{{ item.name }}</p>
+                    <p class="work-about">{{ item.local }}, {{ item.yearStart }} - {{ item.yearEnd }}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
