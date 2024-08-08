@@ -1,0 +1,232 @@
+.container-projects {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-nav);
+
+    .nav {
+        padding: 80px;
+        position: fixed;
+        height: 100vh;
+        width: 430px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .projects {
+        width: 100vw;
+        margin-left: 590px;
+
+        .header {
+            h4 {
+                font-family: 'Inter', sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                height: 110px;
+                margin-top: 145px;
+                color: var(--text-nav-home);
+            }
+        }
+
+        .section-projects {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 100px;
+            margin-bottom: 150px;
+
+            .project-item {
+                .image-container {
+                    // text-align: -webkit-center;
+
+                    .pokedex-home,
+                    .devflix-home,
+                    .landingPage-home {
+                        height: 800px;
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 12px;
+                    }
+
+
+                    .pokedex-home {
+                        background-image: url('/assets/images/aplicacoes/pokedexHome.png');
+
+                    }
+
+                    .devflix-home {
+                        background-image: url('/assets/images/aplicacoes/devflixHome.png');
+                    }
+
+                    .landingPage-home {
+                        background-image: url('/assets/images/aplicacoes/landingPage01.png');
+                    }
+
+                    &:hover {
+
+                        .pokedex-home,
+                        .devflix-home,
+                        .landingPage-home {
+                            display: none;
+                        }
+
+                        .pokedex-index,
+                        .devflix-index,
+                        .landingPage-index {
+                            height: 800px;
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            border-radius: 12px;
+                            transform: scale(1.01);
+                        }
+
+                        .pokedex-index {
+                            background-image: url('/assets/images/aplicacoes/pokedexIndex.png');
+                        }
+
+                        .devflix-index {
+                            background-image: url('/assets/images/aplicacoes/devflixIndex.png');
+                        }
+
+                        .landingPage-index {
+                            background-image: url('/assets/images/aplicacoes/landingPage03.png');
+                        }
+                    }
+                }
+
+                .item-name {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: var(--text-nav-home);
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1368px) {
+    .container-projects {
+        flex-direction: column;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .projects {
+            width: 100vw;
+            margin: 0px;
+
+            .header {
+
+                h4 {
+                    margin: 80px auto 80px 11%;
+                    line-height: 1.2;
+                    font-size: 40px;
+                }
+            }
+
+            .section-projects {
+                margin: auto auto 150px auto;
+
+                .project-item {
+
+                    .image-container {
+
+                        .pokedex-home,
+                        .devflix-home,
+                        .landingPage-home {
+                            height: 30vh;
+                        }
+
+                        &:hover {
+
+                            .pokedex-index,
+                            .devflix-index,
+                            .landingPage-index {
+                                height: 30vh;
+                                transform: none;
+                            }
+
+                        }
+                    }
+
+                    .item-name {
+                        text-align: center;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-projects {
+        flex-direction: column;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .projects {
+            width: 100vw;
+            margin: 0px;
+
+            .header {
+                h4 {
+                    margin: 80px auto;
+                    line-height: 1.2;
+                    text-align: center;
+                    font-size: 28px;
+                }
+            }
+
+            .section-projects {
+                margin: auto auto 150px auto;
+
+                .project-item {
+
+                    .image-container {
+
+                        .pokedex-home,
+                        .devflix-home,
+                        .landingPage-home {
+                            height: 22vh;
+                        }
+
+                        &:hover {
+
+                            .pokedex-index,
+                            .devflix-index,
+                            .landingPage-index {
+                                height: 22vh;
+                                transform: none;
+                            }
+
+                        }
+                    }
+
+                    .item-name {
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

@@ -4,16 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DatabaseViewService {
-  private pokedexView: any = [
-    {
-      image: './assets/images/aplicacoes/pokedexHome.png',
-      text: 'Tela de início da aplicação onde contém a lista de 100 Pokemons, contendo seu nome e seu tipo. A barra de pesquisa permite pesquisar um Pokemon por seu nome.',
-    },
-    {
-      image: './assets/images/aplicacoes/pokedexIndex.png',
-      text: 'Tela de detalhes é aberta ao clicar em um Pokemon na tela de início, nela contém uma foto, as estatísticas do Pokemon selecionado e seu nome em Japonês.',
-    },
-  ]
+  private pokedexView: any = {
+    imageHome: 'pokedex-home',
+    imageIndex: 'pokedex-index',
+    text: 'Pokedex Website',
+  }
+
 
   private pokedexTech: any = [
     {
@@ -34,20 +30,15 @@ export class DatabaseViewService {
     }
   ]
 
-  private devflixView: any = [
-    {
-      image: './assets/images/aplicacoes/devflixHome.png',
-      text: 'Tela de início da aplicação onde tem um modal de cadastro, nele contém campos de nome, sobrenome e senha. Onde o campo de email e senha são obrigatórios.',
-    },
-    {
-      image: './assets/images/aplicacoes/devflixIndex.png',
-      text: 'Tela inicial da aplicação contém um clone da tela da netflix, contando com um carrosel. Ao clicar no filme, o usuário é redirecionado para um trailer do filme no youtube.',
-    }
-  ]
+  private devflixView: any = {
+    imageHome: 'devflix-home',
+    imageIndex: 'devflix-index',
+    text: 'Copy Netflix Website',
+  }
+
 
   private devflixTech: any = [
     {
-      tech: 'HTML',
       image: './assets/images/icons/ico-html.svg'
     },
     {
@@ -60,24 +51,11 @@ export class DatabaseViewService {
     }
   ]
 
-  private langingPageView: any = [
-    {
-      image: './assets/images/aplicacoes/landingPage01.png',
-      text: 'Primeira seção da tela de exemplo de uma landing page, contendo infomações sobre a empresa.',
-    },
-    {
-      image: './assets/images/aplicacoes/landingPage02.png',
-      text: 'Segunda seção da tela de exemplo de uma landing page, contendo infomações sobre a localização da empresa.',
-    },
-    {
-      image: './assets/images/aplicacoes/landingPage03.png',
-      text: 'Terceira seção da tela de exemplo de uma landing page, contendo infomações sobre os serviços da empresa.',
-    },
-    {
-      image: './assets/images/aplicacoes/landingPage04.png',
-      text: 'Quarta seção da tela de exemplo de uma landing page, contendo os segmentos e ramos que empresa contém.',
-    }
-  ]
+  private langingPageView: any = {
+    imageHome: 'landingPage-home',
+    imageIndex: 'landingPage-index',
+    text: 'LandingPage to Websites',
+  }
 
   private langingPageTech: any = [
     {

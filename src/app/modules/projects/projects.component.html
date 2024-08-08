@@ -1,0 +1,19 @@
+<div class="container-projects">
+    <div class="nav">
+        <app-nav></app-nav>
+    </div>
+    <div class="projects">
+        <div class="header">
+            <h4>My Best Projects</h4>
+        </div>
+        <div class="section-projects">
+            <div class="project-item" *ngFor="let item of dataProjects">
+                <div class="image-container">
+                    <div ngClass="{{ item.imageHome }}"></div>
+                    <div ngClass="{{ item.imageIndex }}"></div>
+                </div>
+                <h6 class="item-name">{{ item.text }}</h6>
+            </div>
+        </div>
+    </div>
+</div>

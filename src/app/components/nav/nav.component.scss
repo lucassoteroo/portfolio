@@ -1,4 +1,4 @@
-@import '../../../../assets/scss/mixin';
+@import '../../../assets/scss/mixin';
 
 .container-nav {
     background-color: var(--background-nav);
@@ -202,7 +202,7 @@
 
 
 // Responsividade para Tablet
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1368px) {
     .container-nav {
         width: 98vw;
         align-content: center;
