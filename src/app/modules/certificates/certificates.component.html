@@ -1,0 +1,26 @@
+<div class="container-certificate">
+    <div class="nav">
+        <app-nav></app-nav>
+    </div>
+    <div class="certificates">
+        <div class="header">
+            <h4>My Certificates</h4>
+        </div>
+        <div class="section-certificates">
+            <div class="button-certificates">
+                <p-button *ngFor="let item of dataCertificates; let i = index" (onClick)="active = i.toString()"
+                    [rounded]="true" [label]="(i + 1).toString()" [outlined]="active !== i.toString()"
+                    [ngClass]="{'active-button': active === i.toString(), 'inactive-button': active !== i.toString()}"></p-button>
+            </div>
+
+            <p-accordion class="accordion-certificate" [(value)]="active">
+                <p-accordion-panel *ngFor="let item of dataCertificates; let i = index" [value]="i.toString()">
+                    <p-accordion-header>{{ item.about }}</p-accordion-header>
+                    <p-accordion-content *ngFor="let image of item.certificates">
+                        <img src="{{ image.image }}" alt="" srcset="">
+                    </p-accordion-content>
+                </p-accordion-panel>
+            </p-accordion>
+        </div>
+    </div>
+</div>

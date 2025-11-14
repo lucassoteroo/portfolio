@@ -1,0 +1,21 @@
+<div class="container-contact">
+    <div class="nav">
+        <app-nav></app-nav>
+    </div>
+    <div class="contact">
+        <div class="header">
+            <h4>My Contacts</h4>
+        </div>
+        <div class="section-contact">
+            <div class="card" *ngFor="let item of dataContacts">
+                <p-card class="item-card" (click)="openLink(item)">
+                    <div class="header">
+                        <img src="{{ item.image }}" alt="" srcset="">
+                        <h4>{{ item.type }}</h4>
+                    </div>
+                    <p>{{ item.data }}</p>
+                </p-card>
+            </div>
+        </div>
+    </div>
+</div>

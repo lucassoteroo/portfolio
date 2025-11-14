@@ -1,0 +1,178 @@
+.container-stacks {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-nav);
+
+    .nav {
+        padding: 80px;
+        position: fixed;
+        height: 100vh;
+        width: 430px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .stacks {
+        width: 100vw;
+        margin-left: 590px;
+
+        .header {
+            h4 {
+                font-family: 'Inter', sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                height: 110px;
+                margin-top: 145px;
+                color: var(--text-nav-home);
+            }
+        }
+
+        .section-stacks {
+            width: 65vw;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            .stacks-item {
+                display: flex;
+                flex-direction: row;
+                background-color: var(--background-stacks-item);
+                border-radius: 12px;
+                padding: 70px;
+
+                .image-container {
+                    margin-right: 50px;
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+
+                .text-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 50px;
+
+                    .item-title {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .item-name {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 24px;
+                            font-weight: 600;
+                            color: var(--text-nav-home);
+                            // margin-top: 30px;
+                        }
+
+                        .item-years {
+                            font-family: 'Inter', sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: var(--text-nav-disabled);
+                        }
+                    }
+
+                    .item-about {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 20px;
+                        font-weight: 400;
+                        color: var(--text-nav-disabled);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1368px) {
+    .container-stacks {
+        flex-direction: column;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .stacks {
+            width: 100vw;
+            margin: 0px;
+
+            .header {
+                h4 {
+                    margin: 80px auto 80px 11%;
+                    line-height: 1.2;
+                    font-size: 40px;
+                }
+            }
+
+            .section-stacks {
+                width: 80vw;
+                margin: auto auto 150px auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-stacks {
+        flex-direction: column;
+        padding-bottom: 50px;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .stacks {
+            width: 100vw;
+            margin: 0px;
+
+            .header {
+                h4 {
+                    margin: 80px auto;
+                    line-height: 1.2;
+                    text-align: center;
+                    font-size: 28px;
+                }
+            }
+
+            .section-stacks {
+                width: 90vw;
+                margin: auto auto;
+
+                .stacks-item {
+                    flex-direction: column;
+                    gap: 30px;
+
+                    .image-container {
+                        margin-right: 0;
+                        align-self: center;
+                    }
+
+                    .text-container {
+                        gap: 30px;
+
+                        .item-title {
+                            align-items: center;
+                        }
+
+                        .item-about {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

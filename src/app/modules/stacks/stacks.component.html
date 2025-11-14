@@ -1,0 +1,24 @@
+<div class="container-stacks">
+    <div class="nav">
+        <app-nav></app-nav>
+    </div>
+    <div class="stacks">
+        <div class="header">
+            <h4>My Tech Toolbox</h4>
+        </div>
+        <div class="section-stacks">
+            <div class="stacks-item" *ngFor="let item of dataStacks">
+                <div class="image-container">
+                    <img src="{{ item.image }}" alt="" srcset="">
+                </div>
+                <div class="text-container">
+                    <div class="item-title">
+                        <p class="item-name">{{ item.name }}</p>
+                        <p class="item-years">{{ item.field }} || {{ item.years }} years</p>
+                    </div>
+                    <p class="item-about">{{ item.text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

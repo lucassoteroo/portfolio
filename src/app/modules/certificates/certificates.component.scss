@@ -1,0 +1,176 @@
+.container-certificate {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-nav);
+
+    .nav {
+        padding: 80px;
+        position: fixed;
+        height: 100vh;
+        width: 430px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .certificates {
+        width: 100vw;
+        margin-left: 590px;
+
+        .header {
+            h4 {
+                font-family: 'Inter', sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                height: 110px;
+                margin-top: 145px;
+                color: var(--text-nav-home);
+            }
+        }
+
+        .section-certificates {
+
+            .button-certificates {
+                width: 75%;
+                padding: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                gap: 10px;
+
+                p-button {
+                    padding: 5px 10px;
+                    color: var(--text-nav-home);
+                }
+
+                .active-button {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    background-color: var(--text-nav-hover);
+                    border-radius: 20px;
+                    color: black;
+                }
+            }
+
+            .accordion-certificate {
+                display: flex;
+                flex-direction: column;
+                width: 75%;
+                gap: 20px;
+
+                p-accordion-panel {
+                    background-color: var(--background-stacks-item);
+                    padding: 20px;
+                    border-radius: 20px;
+                    border: none;
+
+                    p-accordion-header {
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 600;
+                        font-size: 20px;
+                        color: var(--text-nav-home);
+                        border: none;
+                        padding-bottom: 5px;
+                    }
+
+                    p-accordion-content {
+
+                        img {
+                            width: -webkit-fill-available;
+                            padding: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1368px) {
+    .container-certificate {
+        flex-direction: column;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .certificates {
+            width: 100vw;
+            margin: 0px;
+
+            .header {
+
+                h4 {
+                    margin: 80px auto 80px 11%;
+                    line-height: 1.2;
+                    font-size: 40px;
+                }
+            }
+
+            .section-certificates {
+
+                .button-certificates {
+                    width: auto;
+                    padding: 0px 50px;
+                }
+
+                .accordion-certificate {
+                    width: auto;
+                    padding: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-certificate {
+        flex-direction: column;
+        padding-bottom: 50px;
+
+        .nav {
+            padding: 0px;
+            position: inherit;
+            height: auto;
+            width: auto;
+        }
+
+        .certificates {
+            width: 100vw;
+            margin: 0px;
+
+            .header {
+                h4 {
+                    margin: 80px auto;
+                    line-height: 1.2;
+                    text-align: center;
+                    font-size: 28px;
+                }
+            }
+
+            .section-certificates {
+                justify-items: center;
+
+                .button-certificates {
+                    width: 90%;
+                }
+
+                .accordion-certificate {
+                    width: 90%;
+
+                    p-accordion-panel {
+                        p-accordion-header {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 // Pages
 import { HomeComponent } from './modules/home.component';
 import { ProjectsComponent } from './modules/projects/projects.component';
+import { StacksComponent } from './modules/stacks/stacks.component';
+import { CertificatesComponent } from './modules/certificates/certificates.component';
+import { ContactComponent } from './modules/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -14,14 +17,18 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent
   },
-  // {
-  //   path: 'stack',
-  //   component: TechComponent
-  // },
-  // {
-  //   path: 'certificate',
-  //   component: CertificadosPageComponent
-  // }
+  {
+    path: 'stack',
+    component: StacksComponent
+  },
+  {
+    path: 'certificate',
+    component: CertificatesComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  }
 ];
 
 @NgModule({

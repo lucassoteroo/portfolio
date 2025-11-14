@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-nav',
-    templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss'],
-    standalone: false
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss'],
+  standalone: false
 })
 export class NavComponent implements OnInit {
   public valor: boolean = false;
-  availableForWork: boolean = false;
+  availableForWork: boolean = true;
 
-  isMenuOpen = false;
+  isOpen = false;
 
   menuItems = [
     { name: 'About', link: '/', image: 'item-user', home: 'home' },
@@ -26,12 +26,12 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
   navigateTo(link: string) {
     this.router.navigate([link]);
+  }
+
+  toggleMenu() {
+    this.isOpen = !this.isOpen;
   }
 
 }

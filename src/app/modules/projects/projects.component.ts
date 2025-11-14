@@ -15,8 +15,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataProjects = this.projectsService.view
-
-    console.log(this.dataProjects)
   }
 
 

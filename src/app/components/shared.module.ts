@@ -8,8 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
 
 // Components
 import { NavComponent } from './nav/nav.component';
-import { NgxEchartsModule } from 'ngx-echarts';
 
+// PrimeNG
+import { DrawerModule } from 'primeng/drawer';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
     AppRoutingModule,
     MatToolbarModule,
     MatIconModule,
-    NgxEchartsModule.forRoot({
-      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
-    }),
+    DrawerModule
   ],
   exports: [
     NavComponent
