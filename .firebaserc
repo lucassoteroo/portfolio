@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "portfolio-873a6"
+  },
+  "targets": {
+    "portfolio-873a6": {
+      "hosting": {
+        "meu-portfolio": [
+          "portfolio-dev-lucas"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
