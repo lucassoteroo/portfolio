@@ -73,6 +73,16 @@ export class DatabaseTechService {
       ],
       text: 'As my desire has always been to become a fullstack developer I decided to start studying back end, thats where I discovered SQL. With him I learned to manage and manipulate relational databases, teaching me a way to perform queries and organize information'
     },
+    {
+      image: './assets/images/icons/ico-gcp.svg',
+      name: 'GCP',
+      years: 1,
+      field: 'DevOps',
+      courses: [
+        'GCP - Cloud Engineer'
+      ],
+      text: 'The course taught me how to provision and manage scalable infrastructure on GCP, operating virtual machines, Kubernetes clusters (GKE), and secure networks.'
+    },
   ]
 
   constructor() { }

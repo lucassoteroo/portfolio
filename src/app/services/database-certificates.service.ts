@@ -43,6 +43,12 @@ export class DatabaseCertificatesService {
         { image: './assets/images/certificates/bancoDeDadosSqlDoBasicoAoAvancado.jpg', }
       ],
     },
+    {
+      about: 'GCP',
+      certificates: [
+        { image: './assets/images/certificates/gcp.jpeg', }
+      ],
+    },
   ]
 
   constructor() { }
