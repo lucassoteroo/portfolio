@@ -5,8 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DatabaseViewService {
   private pokedexView: any = {
-    imageHome: 'pokedex-home',
-    imageIndex: 'pokedex-index',
+    image: ['pokedexHome.png', 'pokedexIndex.png'],
     text: 'Pokedex Website',
   }
 
@@ -31,8 +30,7 @@ export class DatabaseViewService {
   ]
 
   private devflixView: any = {
-    imageHome: 'devflix-home',
-    imageIndex: 'devflix-index',
+    image: ['devflixHome.png', 'devflixIndex.png'],
     text: 'Copy Netflix Website',
   }
 
@@ -52,8 +50,7 @@ export class DatabaseViewService {
   ]
 
   private langingPageView: any = {
-    imageHome: 'landingPage-home',
-    imageIndex: 'landingPage-index',
+    image: ['landingPage01.png', 'landingPage02.png', 'landingPage03.png', 'landingPage04.png'],
     text: 'LandingPage to Websites',
   }
 

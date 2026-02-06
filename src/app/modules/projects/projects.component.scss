@@ -31,74 +31,121 @@
         }
 
         .section-projects {
-            width: 90%;
-            display: grid;
-            grid-template-columns: 1fr;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             gap: 100px;
             margin-bottom: 150px;
 
-            .project-item {
-                .image-container {
-                    // text-align: -webkit-center;
+            // // .project-item {
+            // //     .image-container {
+            // //         // text-align: -webkit-center;
 
-                    .pokedex-home,
-                    .devflix-home,
-                    .landingPage-home {
-                        height: 800px;
-                        background-size: cover;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        border-radius: 12px;
-                    }
+            // //         .pokedex-home,
+            // //         .devflix-home,
+            // //         .landingPage-home {
+            // //             height: 800px;
+            // //             background-size: cover;
+            // //             background-position: center;
+            // //             background-repeat: no-repeat;
+            // //             border-radius: 12px;
+            // //         }
 
 
-                    .pokedex-home {
-                        background-image: url('/assets/images/aplicacoes/pokedexHome.png');
+            // //         .pokedex-home {
+            // //             background-image: url('/assets/images/aplicacoes/pokedexHome.png');
 
-                    }
+            // //         }
 
-                    .devflix-home {
-                        background-image: url('/assets/images/aplicacoes/devflixHome.png');
-                    }
+            // //         .devflix-home {
+            // //             background-image: url('/assets/images/aplicacoes/devflixHome.png');
+            // //         }
 
-                    .landingPage-home {
-                        background-image: url('/assets/images/aplicacoes/landingPage01.png');
-                    }
+            // //         .landingPage-home {
+            // //             background-image: url('/assets/images/aplicacoes/landingPage01.png');
+            // //         }
+
+            // //         &:hover {
+
+            // //             .pokedex-home,
+            // //             .devflix-home,
+            // //             .landingPage-home {
+            // //                 display: none;
+            // //             }
+
+            // //             .pokedex-index,
+            // //             .devflix-index,
+            // //             .landingPage-index {
+            // //                 height: 800px;
+            // //                 background-size: cover;
+            // //                 background-position: center;
+            // //                 background-repeat: no-repeat;
+            // //                 border-radius: 12px;
+            // //                 transform: scale(1.01);
+            // //             }
+
+            // //             .pokedex-index {
+            // //                 background-image: url('/assets/images/aplicacoes/pokedexIndex.png');
+            // //             }
+
+            // //             .devflix-index {
+            // //                 background-image: url('/assets/images/aplicacoes/devflixIndex.png');
+            // //             }
+
+            // //             .landingPage-index {
+            // //                 background-image: url('/assets/images/aplicacoes/landingPage03.png');
+            // //             }
+            // //         }
+            // //     }
+
+            // //     .item-name {
+            // //         font-family: 'Inter', sans-serif;
+            // //         font-size: 20px;
+            // //         font-weight: 600;
+            // //         color: var(--text-nav-home);
+            // //         margin-top: 30px;
+            // //     }
+            // // }
+
+            .carousel-container {
+                padding-right: 2rem;
+
+                .product-card {
+                    border: 1px solid var(--background-nav);
+                    border-radius: 8px;
+                    margin: 0.5rem;
+                    padding: 1.5rem;
+                    background-color: var(--background-nav);
+                    text-align: center;
+                    transition: transform 0.2s ease-in-out;
 
                     &:hover {
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    }
+                }
 
-                        .pokedex-home,
-                        .devflix-home,
-                        .landingPage-home {
-                            display: none;
-                        }
+                .product-image-container {
+                    margin-bottom: 1rem;
 
-                        .pokedex-index,
-                        .devflix-index,
-                        .landingPage-index {
-                            height: 800px;
-                            background-size: cover;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            border-radius: 12px;
-                            transform: scale(1.01);
-                        }
+                    .image-wrapper {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        overflow: hidden;
+                        border-radius: 4px;
 
-                        .pokedex-index {
-                            background-image: url('/assets/images/aplicacoes/pokedexIndex.png');
-                        }
-
-                        .devflix-index {
-                            background-image: url('/assets/images/aplicacoes/devflixIndex.png');
-                        }
-
-                        .landingPage-index {
-                            background-image: url('/assets/images/aplicacoes/landingPage03.png');
+                        .product-image {
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                            display: block;
                         }
                     }
                 }
 
-                .item-name {
+                .product-name {
                     font-family: 'Inter', sans-serif;
                     font-size: 20px;
                     font-weight: 600;
@@ -122,7 +169,7 @@
         }
 
         .projects {
-            width: 100vw;
+            width: 100%;
             margin: 0px;
 
             .header {
@@ -136,35 +183,12 @@
 
             .section-projects {
                 margin: auto auto 150px auto;
+                gap: 50px;
 
-                .project-item {
-
-                    .image-container {
-
-                        .pokedex-home,
-                        .devflix-home,
-                        .landingPage-home {
-                            height: 30vh;
-                        }
-
-                        &:hover {
-
-                            .pokedex-index,
-                            .devflix-index,
-                            .landingPage-index {
-                                height: 30vh;
-                                transform: none;
-                            }
-
-                        }
-                    }
-
-                    .item-name {
-                        text-align: center;
-                    }
+                .carousel-container {
+                    padding: 0;
+                    width: 95%;
                 }
-
-
             }
         }
     }
@@ -196,36 +220,16 @@
 
             .section-projects {
                 margin: auto auto 150px auto;
+                gap: 30px;
 
-                .project-item {
+                .carousel-container {
+                    padding: 0;
+                    width: 95%;
 
-                    .image-container {
-
-                        .pokedex-home,
-                        .devflix-home,
-                        .landingPage-home {
-                            height: 22vh;
-                        }
-
-                        &:hover {
-
-                            .pokedex-index,
-                            .devflix-index,
-                            .landingPage-index {
-                                height: 22vh;
-                                transform: none;
-                            }
-
-                        }
-                    }
-
-                    .item-name {
-                        text-align: center;
+                    .product-name {
                         font-size: 14px;
                     }
                 }
-
-
             }
         }
     }

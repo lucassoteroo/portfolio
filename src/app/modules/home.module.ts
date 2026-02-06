@@ -17,6 +17,7 @@ import { DividerModule } from 'primeng/divider';
 import { CardModule } from 'primeng/card';
 import { ContactComponent } from './contact/contact.component';
 import { InputMaskModule } from 'primeng/inputmask';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { InputMaskModule } from 'primeng/inputmask';
     ButtonModule,
     DividerModule,
     CardModule,
-    InputMaskModule
+    InputMaskModule,
+    CarouselModule,
   ]
 })
 export class HomeModule { }

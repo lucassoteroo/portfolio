@@ -74,3 +74,13 @@ a {
     flex-direction: column;
     gap: 20px;
 }
+
+.p-carousel-item-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.p-carousel-prev-button,
+.p-carousel-next-button {
+    color: white;
+}
